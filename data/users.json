@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "id": "32412f56-a761-4079-8f35-fe608a2e8826",
+    "username": "hana",
+    "email": "hana1@gmail.com",
+    "hashedPassword": "$2a$12$Af5D7mzNqVH5JiKp4oUpAuw0VFZe6QBWsq593X8tCzaqNC01NYWzi",
+    "role": "MEMBER",
+    "teamId": null
+  },
+  {
+    "id": "599df5ee-405e-4ae7-8944-3f2a2142fe5f",
+    "username": "Hana",
+    "email": "hana@gmail.com",
+    "hashedPassword": "$2a$12$JT8jnrUVAMQCEL1ftKGMLu8pMixrp78Uccdma/1.djkF678hROr3m",
+    "role": "MEMBER",
+    "teamId": null
+  },
+  {
+    "id": "b7b65013-db65-475a-b98a-7889abd651b3",
+    "username": "admin",
+    "email": "admin@gmail.com",
+    "hashedPassword": "$2a$12$n0aiN46/WrxvjWL/vc2m7.rG77eRyF/kpaH2cu6aLnvYvlNBlyPMq",
+    "role": "LEADER",
+    "teamId": null
+  },
+  {
+    "id": "a6315e8a-f29d-492a-965b-1299f26ff42c",
+    "username": "hzbsoa",
+    "email": "test@gmail.com",
+    "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
+    "role": "MEMBER",
+    "teamId": null
+  }
+]
