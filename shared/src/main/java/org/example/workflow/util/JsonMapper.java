@@ -24,7 +24,7 @@ public final class JsonMapper {
             .registerTypeAdapter(UUID.class,          new UUIDAdapter())
             .registerTypeAdapter(LocalDateTime.class,  new LocalDateTimeAdapter())
             .registerTypeAdapter(LocalDate.class,      new LocalDateAdapter())
-            .setPrettyPrinting()
+
             .serializeNulls()
             .create();
 
