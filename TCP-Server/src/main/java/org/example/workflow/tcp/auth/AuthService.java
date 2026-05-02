@@ -38,33 +38,33 @@ public class AuthService {
     public ResponsePacket login(String payload) {
         try {
             JsonObject json     = JsonParser.parseString(payload).getAsJsonObject();
-            String     username = json.get("username").getAsString().trim();
+            log.info("[AuthService] Login payload received: " + json);
+            String     email    = json.get("email").getAsString().trim();   // ← was "username"
             String     password = json.get("password").getAsString();
 
             // 1. Basic validation
-            ValidationResult vUser = ValidationUtils.validateUsername(username);
-            if (vUser.isInvalid())
-                return new ResponsePacket(PacketType.ERROR, vUser.getMessage());
+            ValidationResult vEmail = ValidationUtils.validateEmail(email);
+            if (vEmail.isInvalid())
+                return new ResponsePacket(PacketType.ERROR, vEmail.getMessage());
 
             ValidationResult vPass = ValidationUtils.validatePassword(password);
             if (vPass.isInvalid())
                 return new ResponsePacket(PacketType.ERROR, vPass.getMessage());
 
-            // 2. User lookup
-            User user = userRepo.findByUsername(username)
-                    .orElse(null);
+            // 2. User lookup by email  ← was findByUsername
+            User user = userRepo.findByEmail(email).orElse(null);
             if (user == null)
-                return new ResponsePacket(PacketType.ERROR, "Username not found");
+                return new ResponsePacket(PacketType.ERROR, "No account found for that email");
 
             // 3. Password check
             if (!PasswordUtils.verify(password, user.getHashedPassword()))
                 return new ResponsePacket(PacketType.ERROR, "Incorrect password");
 
             // 4. Create session + mark online
-            UUID   token     = sessionMgr.createSession(user);
-            String tokenStr  = token.toString();
+            UUID   token    = sessionMgr.createSession(user);
+            String tokenStr = token.toString();
 
-            log.info("[AuthService] LOGIN success — user=" + username + " token=" + tokenStr);
+            log.info("[AuthService] LOGIN success — email=" + email + " token=" + tokenStr);
 
             // 5. Return client-safe User + session token
             String userData = JsonMapper.toJson(user.toClientSafe());

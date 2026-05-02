@@ -46,11 +46,15 @@ public class ClientHandler implements Runnable {
 
             String line;
             while ((line = reader.readLine()) != null) {
-                RequestPacket  request  = JsonMapper.fromJson(line, RequestPacket.class);
-                ResponsePacket response = dispatch(request);
-                sendResponse(response);
+                try {
+                    RequestPacket  request  = JsonMapper.fromJson(line, RequestPacket.class);
+                    ResponsePacket response = dispatch(request);
+                    sendResponse(response);
+                } catch (Exception e) {
+                    log.severe("[ClientHandler] Error processing packet: " + e.getMessage());
+                    sendResponse(new ResponsePacket(PacketType.ERROR, "Server error: " + e.getMessage()));
+                }
             }
-
         } catch (IOException e) {
             log.warning("[ClientHandler] Connection lost: " + e.getMessage());
         } finally {
