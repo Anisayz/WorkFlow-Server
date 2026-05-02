@@ -5,7 +5,7 @@
     "email": "hana1@gmail.com",
     "hashedPassword": "$2a$12$Af5D7mzNqVH5JiKp4oUpAuw0VFZe6QBWsq593X8tCzaqNC01NYWzi",
     "role": "MEMBER",
-    "teamId": null
+    "teamId": "550e8400-e29b-41d4-a716-446655440000"
   },
   {
     "id": "599df5ee-405e-4ae7-8944-3f2a2142fe5f",
@@ -13,7 +13,7 @@
     "email": "hana@gmail.com",
     "hashedPassword": "$2a$12$JT8jnrUVAMQCEL1ftKGMLu8pMixrp78Uccdma/1.djkF678hROr3m",
     "role": "MEMBER",
-    "teamId": null
+    "teamId": "550e8400-e29b-41d4-a716-446655440000"
   },
   {
     "id": "b7b65013-db65-475a-b98a-7889abd651b3",
@@ -21,7 +21,7 @@
     "email": "admin@gmail.com",
     "hashedPassword": "$2a$12$n0aiN46/WrxvjWL/vc2m7.rG77eRyF/kpaH2cu6aLnvYvlNBlyPMq",
     "role": "LEADER",
-    "teamId": null
+    "teamId": "550e8400-e29b-41d4-a716-446655440000"
   },
   {
     "id": "a6315e8a-f29d-492a-965b-1299f26ff42c",

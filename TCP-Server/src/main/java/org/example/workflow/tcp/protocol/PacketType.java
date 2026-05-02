@@ -2,9 +2,11 @@ package org.example.workflow.tcp.protocol;
 
 public enum PacketType {
     LOGIN,
-    LOGOUT,
     REGISTER,
+    LOGOUT,
+    CHAT_SEND,
+    CHAT_HISTORY,
+    CHAT_MESSAGE,
     SUCCESS,
-    ERROR,
-
+    ERROR
 }
