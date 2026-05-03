@@ -12,6 +12,7 @@
     <modules>
         <module>shared</module>
         <module>tcp-server</module>
+        <module>rmi-server</module>
     </modules>
 
     <properties>
