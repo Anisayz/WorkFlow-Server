@@ -16,12 +16,7 @@ import org.example.workflow.util.ValidationUtils.ValidationResult;
 import java.util.UUID;
 import java.util.logging.Logger;
 
-/**
- * AuthService — server-side authentication logic.
- *
- * Called by ClientHandler on every LOGIN, REGISTER, LOGOUT packet.
- * All methods return a ResponsePacket ready to be sent back to the client.
- */
+
 public class AuthService {
 
     private static final Logger        log         = Logger.getLogger(AuthService.class.getName());
@@ -30,11 +25,7 @@ public class AuthService {
 
     // ── Login ─────────────────────────────────────────────────────────────────
 
-    /**
-     * Authenticates a user and opens a session.
-     *
-     * Expected payload: { "username": "...", "password": "..." }
-     */
+
     public ResponsePacket login(String payload) {
         try {
             JsonObject json     = JsonParser.parseString(payload).getAsJsonObject();

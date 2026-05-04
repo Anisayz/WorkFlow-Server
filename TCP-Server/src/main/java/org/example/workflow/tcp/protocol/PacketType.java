@@ -7,6 +7,8 @@ public enum PacketType {
     CHAT_SEND,
     CHAT_HISTORY,
     CHAT_MESSAGE,
+    GET_TEAM_MEMBERS,   // client → server: { "teamId": "..." }
+    // server → client: { "members": [ User, ... ] }
     SUCCESS,
     ERROR
 }

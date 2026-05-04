@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id" : "550e8400-e29b-41d4-a716-446655440000",
+    "name" : "IML",
+    "description" : "c'est de bla bla",
+    "leaderId" : "033dafb8-e3d8-4b16-ac31-b2ba6635a887",
+    "inviteCode" : "dyhia" ,
+    "members": [
+      "033dafb8-e3d8-4b16-ac31-b2ba6635a887","599df5ee-405e-4ae7-8944-3f2a2142fe5f"
+    ]
+  }
+]

@@ -1,5 +1,7 @@
 package org.example.workflow.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -15,7 +17,8 @@ public class Team implements Serializable {
     private String        description;
     private String        inviteCode;
     private UUID          leaderId;
-    private List<UUID>    memberIds;    // resolved to User objects by repositories
+    @SerializedName("members")
+    private List<UUID>    memberIds;
     private LocalDateTime createdAt;
 
     public Team() {

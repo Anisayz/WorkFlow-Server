@@ -6,6 +6,7 @@ import org.example.workflow.tcp.protocol.PacketType;
 import org.example.workflow.tcp.protocol.RequestPacket;
 import org.example.workflow.tcp.protocol.ResponsePacket;
 import org.example.workflow.tcp.session.SessionManager;
+
 import org.example.workflow.util.JsonMapper;
 
 import java.io.*;
@@ -13,22 +14,24 @@ import java.net.Socket;
 import java.util.UUID;
 import java.util.logging.Logger;
 
-//ClientHandler — one thread per connected client.
-// handles AUTH and CHAT packets.
+/**
+ * ClientHandler — one thread per connected client.
+ * Handles AUTH, CHAT, and TEAM packets.
+ */
 public class ClientHandler implements Runnable {
 
-    private static final Logger     log        = Logger.getLogger(ClientHandler.class.getName());
+    private static final Logger  log        = Logger.getLogger(ClientHandler.class.getName());
 
-    private final Socket            socket;
-    private final AuthService       authService = new AuthService();
-    private final SessionManager    sessionMgr  = SessionManager.getInstance();
-    private final ChatService chatService = new ChatService();
+    private final Socket         socket;
+    private final AuthService    authService = new AuthService();
+    private final ChatService    chatService = new ChatService();
+    private final TeamService    teamService = new TeamService();     // ← added
+    private final SessionManager sessionMgr  = SessionManager.getInstance();
 
-    private BufferedReader          reader;
-    private PrintWriter             writer;
-    private UUID                    sessionToken; //
-    private UUID                     currentTeamId; // set after joining a chat room// set after successful LOGIN
-
+    private BufferedReader reader;
+    private PrintWriter    writer;
+    private UUID           sessionToken;
+    private UUID           currentTeamId;
 
     public ClientHandler(Socket socket) {
         this.socket = socket;
@@ -60,23 +63,25 @@ public class ClientHandler implements Runnable {
         }
     }
 
-    // ── Dispatch ──────────────────────────────────────────────────────────────
+    // ── Dispatch ─────────────────────────────────────────────────────
 
     private ResponsePacket dispatch(RequestPacket request) {
         if (request == null || request.getType() == null)
             return new ResponsePacket(PacketType.ERROR, "Malformed packet");
 
         return switch (request.getType()) {
-            case LOGIN    -> handleLogin(request);
-            case REGISTER -> authService.register(request.getPayload());
-            case LOGOUT   -> handleLogout(request);
-            case CHAT_SEND    -> handleChatSend(request);
-            case CHAT_HISTORY -> handleChatHistory(request);
-            default       -> new ResponsePacket(PacketType.ERROR, "Unknown packet type");
+            case LOGIN            -> handleLogin(request);
+            case REGISTER         -> authService.register(request.getPayload());
+            case LOGOUT           -> handleLogout(request);
+            case CHAT_SEND        -> handleChatSend(request);
+            case CHAT_HISTORY     -> handleChatHistory(request);
+            case GET_TEAM_MEMBERS -> handleGetTeamMembers(request);   // ← added
+            default               -> new ResponsePacket(PacketType.ERROR, "Unknown packet type");
         };
     }
 
-    //auth handlers
+    // ── Auth handlers ────────────────────────────────────────────────
+
     private ResponsePacket handleLogin(RequestPacket request) {
         ResponsePacket response = authService.login(request.getPayload());
         if (response.isSuccess()) {
@@ -92,32 +97,45 @@ public class ClientHandler implements Runnable {
         return response;
     }
 
-    //chat handlers
+    // ── Chat handlers ────────────────────────────────────────────────
+
     private ResponsePacket handleChatSend(RequestPacket request) {
         return chatService.handleSend(request.getPayload(), this);
     }
 
     private ResponsePacket handleChatHistory(RequestPacket request) {
-        // Also join the room so this client receives future broadcasts
         try {
             com.google.gson.JsonObject json = com.google.gson.JsonParser
                     .parseString(request.getPayload()).getAsJsonObject();
             currentTeamId = UUID.fromString(json.get("teamId").getAsString());
             chatService.joinRoom(currentTeamId, this);
         } catch (Exception ignored) {}
-
         return chatService.handleHistory(request.getPayload());
     }
 
+    // ── Team handlers ────────────────────────────────────────────────
 
-    // ── I/O ───────────────────────────────────────────────────────────────────
+    /**
+     * GET_TEAM_MEMBERS
+     *
+     * Validates the session token then delegates to TeamService.
+     * Payload: { "teamId": "<UUID>", "token": "<session token>" }
+     */
+    private ResponsePacket handleGetTeamMembers(RequestPacket request) {
+        // Validate session
+        if (sessionToken == null || !sessionMgr.isValid(sessionToken)) {
+            return new ResponsePacket(PacketType.ERROR, "Unauthorized — please log in first");
+        }
+        return teamService.getTeamMembers(request.getPayload());
+    }
 
-    /** Sends a ResponsePacket as a single JSON line. */
+    // ── I/O ──────────────────────────────────────────────────────────
+
     public synchronized void sendResponse(ResponsePacket response) {
         writer.println(JsonMapper.toJson(response));
     }
 
-    // ── Cleanup ───────────────────────────────────────────────────────────────
+    // ── Cleanup ──────────────────────────────────────────────────────
 
     private void cleanup() {
         sessionMgr.onClientDisconnected(sessionToken);

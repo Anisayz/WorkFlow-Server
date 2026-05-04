@@ -8,6 +8,14 @@
     "teamId": "550e8400-e29b-41d4-a716-446655440000"
   },
   {
+    "id": "033dafb8-e3d8-4b16-ac31-b2ba6635a887",
+    "username": "heqls_009",
+    "email": "heqls@gmail.com",
+    "hashedPassword": "$2a$12$xmqfMkW/Jd/UGlHrnbgxoO4Lnt45gwG7lJWjwWtQktmzWq8B.y2Xe",
+    "role": "LEADER",
+    "teamId": "550e8400-e29b-41d4-a716-446655440000"
+  },
+  {
     "id": "599df5ee-405e-4ae7-8944-3f2a2142fe5f",
     "username": "Hana",
     "email": "hana@gmail.com",
