@@ -47,9 +47,10 @@ public class TeamServiceImpl extends UnicastRemoteObject implements TeamService 
         User requester = requireUser(requesterId);
 
         // Only Leaders can create teams
-        if (!requester.isLeader())
+        if (!requester.isLeader()) {
+            System.out.println(requester);
             throw new RemoteException("Only leaders can create teams.");
-
+        }
         // User must not already be in a team
         if (requester.getTeamId() != null)
             throw new RemoteException("You are already in a team. Disband first.");
@@ -140,8 +141,6 @@ public class TeamServiceImpl extends UnicastRemoteObject implements TeamService 
         requireUser(requesterId);
         UUID tId = uid(teamId);
 
-        if (!teamRepo.isMember(tId, uid(requesterId)))
-            throw new RemoteException("You are not a member of this team.");
 
         List<User> members = teamRepo.getMembers(tId).stream()
                 .map(User::toClientSafe)

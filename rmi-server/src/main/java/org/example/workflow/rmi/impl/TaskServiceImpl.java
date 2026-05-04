@@ -43,11 +43,13 @@ public class TaskServiceImpl extends UnicastRemoteObject implements TaskService 
     }
 
     private void requireLeader(String requesterId, UUID teamId) throws RemoteException {
+        System.out.println("ur are not the member");
         if (!teamRepo.isLeader(teamId, uid(requesterId)))
             throw new RemoteException("Access denied: leader only.");
     }
 
     private void requireMember(String requesterId, UUID teamId) throws RemoteException {
+        System.out.println("ur are not the member");
         if (!teamRepo.isMember(teamId, uid(requesterId)))
             throw new RemoteException("Access denied: not a team member.");
     }
