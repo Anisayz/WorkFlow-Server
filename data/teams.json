@@ -1,12 +1,42 @@
 [
   {
-    "id" : "550e8400-e29b-41d4-a716-446655440000",
-    "name" : "IML",
-    "description" : "c'est de bla bla",
-    "leaderId" : "033dafb8-e3d8-4b16-ac31-b2ba6635a887",
-    "inviteCode" : "dyhia" ,
-    "members": [
-      "033dafb8-e3d8-4b16-ac31-b2ba6635a887","599df5ee-405e-4ae7-8944-3f2a2142fe5f"
-    ]
+    "id": "00000000-0000-0000-0000-000000000010",
+    "name": "Équipe RMI",
+    "description": null,
+    "inviteCode": "INVITE123",
+    "leaderId": "00000000-0000-0000-0000-000000000001",
+    "memberIds": [
+      "00000000-0000-0000-0000-000000000001",
+      "00000000-0000-0000-0000-000000000002"
+    ],
+    "createdAt": "2026-04-29T10:32:57.4467378"
+  },
+  {
+    "id": "489b2100-25ed-4249-80a9-eaa159842774",
+    "name": "myTeam",
+    "description": "",
+    "inviteCode": "BPG5GWO3",
+    "leaderId": "b7b65013-db65-475a-b98a-7889abd651b3",
+    "memberIds": [
+      "b7b65013-db65-475a-b98a-7889abd651b3",
+      "b1c2d3e4-f444-4a22-8a44-444444444444",
+      "b1c2d3e4-f222-4a22-8a22-222222222222",
+      "b1c2d3e4-f999-4a22-8a99-999999999999"
+    ],
+    "createdAt": "2026-05-04T11:56:04.3271797"
+  },
+  {
+    "id": "0a218a10-d2ea-480e-bf5e-1cf32862df11",
+    "name": "team2",
+    "description": "qcqzd",
+    "inviteCode": "RFTRINJ0",
+    "leaderId": "b1c2d3e4-f444-4a22-8a44-444444444444",
+    "memberIds": [
+      "b1c2d3e4-f444-4a22-8a44-444444444444",
+      "b1c2d3e4-f666-4a22-8a66-666666666666",
+      "b1c2d3e4-f888-4a22-8a88-888888888888",
+      "a6315e8a-f29d-492a-965b-1299f26ff42c"
+    ],
+    "createdAt": "2026-05-04T12:11:46.1352808"
   }
 ]
