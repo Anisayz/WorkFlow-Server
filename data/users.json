@@ -45,6 +45,14 @@
     "email": "kappa10@gmail.com",
     "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
     "role": "MEMBER",
+    "teamId": null
+  },
+  {
+    "id": "62c76846-c128-4777-822d-d2df4513e40f",
+    "username": "han",
+    "email": "han@gmail.com",
+    "hashedPassword": "$2a$12$Y1YrvRKLGJCcUvI6hykmUe10thkM15B.TwHybUJ.2S8sjtUWfF4a.",
+    "role": "MEMBER",
     "teamId": "00000000-0000-0000-0000-000000000010"
   },
   {
@@ -53,7 +61,7 @@
     "email": "epsilon05@gmail.com",
     "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
     "role": "MEMBER",
-    "teamId": "00000000-0000-0000-0000-000000000010"
+    "teamId": null
   },
   {
     "id": "32412f56-a761-4079-8f35-fe608a2e8826",
@@ -85,7 +93,7 @@
     "email": "gamma03@gmail.com",
     "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
     "role": "MEMBER",
-    "teamId": "00000000-0000-0000-0000-000000000010"
+    "teamId": null
   },
   {
     "id": "599df5ee-405e-4ae7-8944-3f2a2142fe5f",
