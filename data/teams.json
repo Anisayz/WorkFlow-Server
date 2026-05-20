@@ -1,0 +1,35 @@
+[
+  {
+    "id": "00000000-0000-0000-0000-000000000010",
+    "name": "Équipe RMI",
+    "description": null,
+    "inviteCode": "INVITE123",
+    "leaderId": "033dafb8-e3d8-4b16-ac31-b2ba6635a887",
+    "members": [
+      "b1c2d3e4-faaa-4a22-8aaa-aaaaaaaaaaaa",
+      "b1c2d3e4-f555-4a22-8a55-555555555555",
+      "b1c2d3e4-f333-4a22-8a33-333333333333",
+      "62c76846-c128-4777-822d-d2df4513e40f",
+      "033dafb8-e3d8-4b16-ac31-b2ba6635a887"
+    ],
+    "createdAt": "2026-04-29T10:32:57.4467378"
+  },
+  {
+    "id": "489b2100-25ed-4249-80a9-eaa159842774",
+    "name": "myTeam",
+    "description": "",
+    "inviteCode": "BPG5GWO3",
+    "leaderId": "b7b65013-db65-475a-b98a-7889abd651b3",
+    "members": [],
+    "createdAt": "2026-05-04T11:56:04.3271797"
+  },
+  {
+    "id": "0a218a10-d2ea-480e-bf5e-1cf32862df11",
+    "name": "team2",
+    "description": "qcqzd",
+    "inviteCode": "RFTRINJ0",
+    "leaderId": "b1c2d3e4-f444-4a22-8a44-444444444444",
+    "members": [],
+    "createdAt": "2026-05-04T12:11:46.1352808"
+  }
+]

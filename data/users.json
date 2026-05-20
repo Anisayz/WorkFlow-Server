@@ -1,0 +1,122 @@
+[
+  {
+    "id": "b1c2d3e4-f444-4a22-8a44-444444444444",
+    "username": "delta04",
+    "email": "delta04@gmail.com",
+    "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
+    "role": "LEADER",
+    "teamId": "0a218a10-d2ea-480e-bf5e-1cf32862df11"
+  },
+  {
+    "id": "b1c2d3e4-f666-4a22-8a66-666666666666",
+    "username": "zeta06",
+    "email": "zeta06@gmail.com",
+    "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
+    "role": "MEMBER",
+    "teamId": "0a218a10-d2ea-480e-bf5e-1cf32862df11"
+  },
+  {
+    "id": "b1c2d3e4-f222-4a22-8a22-222222222222",
+    "username": "beta02",
+    "email": "beta02@gmail.com",
+    "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
+    "role": "MEMBER",
+    "teamId": "489b2100-25ed-4249-80a9-eaa159842774"
+  },
+  {
+    "id": "b1c2d3e4-f888-4a22-8a88-888888888888",
+    "username": "theta08",
+    "email": "theta08@gmail.com",
+    "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
+    "role": "MEMBER",
+    "teamId": "0a218a10-d2ea-480e-bf5e-1cf32862df11"
+  },
+  {
+    "id": "a6315e8a-f29d-492a-965b-1299f26ff42c",
+    "username": "hzbsoa",
+    "email": "test@gmail.com",
+    "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
+    "role": "MEMBER",
+    "teamId": "0a218a10-d2ea-480e-bf5e-1cf32862df11"
+  },
+  {
+    "id": "b1c2d3e4-faaa-4a22-8aaa-aaaaaaaaaaaa",
+    "username": "kappa10",
+    "email": "kappa10@gmail.com",
+    "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
+    "role": "MEMBER",
+    "teamId": null
+  },
+  {
+    "id": "62c76846-c128-4777-822d-d2df4513e40f",
+    "username": "han",
+    "email": "han@gmail.com",
+    "hashedPassword": "$2a$12$Y1YrvRKLGJCcUvI6hykmUe10thkM15B.TwHybUJ.2S8sjtUWfF4a.",
+    "role": "MEMBER",
+    "teamId": "00000000-0000-0000-0000-000000000010"
+  },
+  {
+    "id": "b1c2d3e4-f555-4a22-8a55-555555555555",
+    "username": "epsilon05",
+    "email": "epsilon05@gmail.com",
+    "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
+    "role": "MEMBER",
+    "teamId": null
+  },
+  {
+    "id": "32412f56-a761-4079-8f35-fe608a2e8826",
+    "username": "hana",
+    "email": "hana1@gmail.com",
+    "hashedPassword": "$2a$12$Af5D7mzNqVH5JiKp4oUpAuw0VFZe6QBWsq593X8tCzaqNC01NYWzi",
+    "role": "MEMBER",
+    "teamId": "550e8400-e29b-41d4-a716-446655440000"
+  },
+  {
+    "id": "033dafb8-e3d8-4b16-ac31-b2ba6635a887",
+    "username": "heqls_009",
+    "email": "heqls@gmail.com",
+    "hashedPassword": "$2a$12$xmqfMkW/Jd/UGlHrnbgxoO4Lnt45gwG7lJWjwWtQktmzWq8B.y2Xe",
+    "role": "LEADER",
+    "teamId": "00000000-0000-0000-0000-000000000010"
+  },
+  {
+    "id": "b1c2d3e4-f111-4a22-8a11-111111111111",
+    "username": "alpha01",
+    "email": "alpha01@gmail.com",
+    "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
+    "role": "MEMBER",
+    "teamId": null
+  },
+  {
+    "id": "b1c2d3e4-f333-4a22-8a33-333333333333",
+    "username": "gamma03",
+    "email": "gamma03@gmail.com",
+    "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
+    "role": "MEMBER",
+    "teamId": null
+  },
+  {
+    "id": "599df5ee-405e-4ae7-8944-3f2a2142fe5f",
+    "username": "Hana",
+    "email": "hana@gmail.com",
+    "hashedPassword": "$2a$12$JT8jnrUVAMQCEL1ftKGMLu8pMixrp78Uccdma/1.djkF678hROr3m",
+    "role": "MEMBER",
+    "teamId": "550e8400-e29b-41d4-a716-446655440000"
+  },
+  {
+    "id": "b7b65013-db65-475a-b98a-7889abd651b3",
+    "username": "admin",
+    "email": "admin@gmail.com",
+    "hashedPassword": "$2a$12$n0aiN46/WrxvjWL/vc2m7.rG77eRyF/kpaH2cu6aLnvYvlNBlyPMq",
+    "role": "LEADER",
+    "teamId": "550e8400-e29b-41d4-a716-446655440000"
+  },
+  {
+    "id": "b1c2d3e4-f999-4a22-8a99-999999999999",
+    "username": "iota09",
+    "email": "iota09@gmail.com",
+    "hashedPassword": "$2a$12$OD0uest4JgxcO3014ZLpk.EdQISSpFOqapnMX0Cbu3.1lQtZsxtYO",
+    "role": "MEMBER",
+    "teamId": "489b2100-25ed-4249-80a9-eaa159842774"
+  }
+]

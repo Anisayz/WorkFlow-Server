@@ -12,6 +12,11 @@
     <modules>
         <module>shared</module>
         <module>tcp-server</module>
+        <module>rmi-server</module>
+      <module>UDP-Server</module>
+        <module>TCP-Server</module>
+
+        <module>jms-server</module>
     </modules>
 
     <properties>
